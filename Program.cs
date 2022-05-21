@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace Strings
 
@@ -15,6 +16,7 @@ namespace Strings
             //Index();
             //MetodeAddition();
             //ManipulationString();
+            //StringBuilder();
         }
 
         static void MyGuide()
@@ -107,6 +109,20 @@ namespace Strings
             text = " The Manipulation string for text ";
             Console.WriteLine(text.Trim()); // remove spaces initial and final the string
 
+        }
+
+        static void StringBuilder()
+        {
+            var text = new StringBuilder();
+
+            text.Append("First Name: ");
+            text.Append("Dev81log");
+            text.Append(" ");
+            text.Append("email: ");
+            text.Append("dev81log@gmail.com");
+
+            text.ToString();
+            Console.WriteLine(text);
         }
     }
 }
