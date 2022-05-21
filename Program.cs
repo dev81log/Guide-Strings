@@ -11,7 +11,10 @@ namespace Strings
             //FormatString();
             //Compare();
             //StartsEndsWith();
-            Equals();
+            //Equals();
+            //Index();
+            //MetodeAddition();
+            //ManipulationString();
         }
 
         static void MyGuide()
@@ -66,6 +69,44 @@ namespace Strings
             Console.WriteLine(text.Equals("My equal Is Equals"));
             Console.WriteLine(text.Equals("My equal is Equals")); // True
             Console.WriteLine(text.Equals("My equal IS Equals", StringComparison.OrdinalIgnoreCase)); // True
+        }
+
+        static void Index()
+        {
+            var text = "My index is Index";
+
+            Console.WriteLine(text.IndexOf("x")); // x in position 7
+            Console.WriteLine(text.LastIndexOf("x")); // x in position 16
+        }
+
+        static void MetodeAddition()
+        {
+            var text = "Metode addition for text";
+            Console.WriteLine(text.ToLower());
+            Console.WriteLine(text.ToUpper());
+            Console.WriteLine(text.Insert(7, "HERE INSERTED "));
+            Console.WriteLine(text.Remove(7, 9));
+            Console.WriteLine(text.Length);
+
+        }
+
+        static void ManipulationString()
+        {
+            var text = "The Manipulation string for text";
+
+            Console.WriteLine(text.Replace("The", "For"));
+            Console.WriteLine(text.Replace("i", "@"));
+
+            var division = text.Split();
+            Console.WriteLine(division[0]); // The
+            Console.WriteLine(division[4]); // text
+
+            var result = text.Substring(1, 6); // he Man
+            Console.WriteLine(result);
+
+            text = " The Manipulation string for text ";
+            Console.WriteLine(text.Trim()); // remove spaces initial and final the string
+
         }
     }
 }
